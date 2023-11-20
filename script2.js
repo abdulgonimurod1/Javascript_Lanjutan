@@ -21,7 +21,7 @@
 //     return `Halo, nama saya ${nama}, saya berumur ${umur} tahun.`;
 // }
 
-// functioon membuat local Execution Context sendiri
+// function membuat local Execution Context sendiri
 // yang di dalamnya terdapat creation dan execution phase
 // window
 // argumen
@@ -71,13 +71,53 @@
 
 // Contoh Closure & Private Method
 
-let add = (function () {
-    let counter = 0;
-    return function() {
-        return counter++;
-    }
-})();
+// let add = (function () {
+//     let counter = 0;
+//     return function() {
+//         return counter++;
+//     }
+// })();
 
-console.log(add());
-console.log(add());
-console.log(add());
+// console.log(add());
+// console.log(add());
+// console.log(add());
+
+// Function Expression
+
+// const nama = function(nama){
+//     return `Halo ${nama}`
+// };
+
+// console.log(nama("Abdul Goni"))
+
+// Arrow Function
+
+// const nama = (nama) => {return `Halo, ${nama}`};
+// console.log(nama("Abdul Goni Murod"));
+
+// const nama = (nama, waktu) => {return `Halo, ${nama} selamat ${waktu}`};
+// console.log(nama("Abdul Goni Murod", "Malam"));
+
+let nama = ['Abdul Goni Murod', 'Muhamad Soleh', 'Siti Suhiah']
+// const jumlahNama = nama.map(function(nama){
+//     return nama.length;
+// });
+
+// console.log(jumlahNama);
+
+// const jumlahNama = nama.map(nama => nama.length);
+// console.log(jumlahNama);
+
+const jumlahHuruf = nama.map(nama => ({ nama, jmlHuruf : nama.length}));
+console.table(jumlahHuruf);
+
+
+// Implisit return
+// const nama = nama =>  `Halo, ${nama}`;
+// console.log(nama("Abdul Goni Murod"));
+
+// const nama = () =>  `Hello world`;
+// console.log(nama());
+
+
+
