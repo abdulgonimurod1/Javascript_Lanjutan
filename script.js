@@ -68,29 +68,29 @@
 
 // versi class
 
-class Mahasiswa {
-    constructor(nama, energi) {
-        this.nama = nama;
-        this.energi = energi;
-    }
+// class Mahasiswa {
+//     constructor(nama, energi) {
+//         this.nama = nama;
+//         this.energi = energi;
+//     }
 
-    makan(porsi){
-    this.energi += porsi;
-    return `Halo ${this.nama}, selamat makan`;
-    }
+//     makan(porsi){
+//     this.energi += porsi;
+//     return `Halo ${this.nama}, selamat makan`;
+//     }
 
-    main(jam) {
-        this.energi -= jam;
-        return `Halo ${this.nama}, selamat bermain`;
-    }
+//     main(jam) {
+//         this.energi -= jam;
+//         return `Halo ${this.nama}, selamat bermain`;
+//     }
 
-    tidur (jam) {
-        this.energi += jam * 2;
-        return `Halo ${this.nama}, selamat tidur`;
-    }
-}
+//     tidur (jam) {
+//         this.energi += jam * 2;
+//         return `Halo ${this.nama}, selamat tidur`;
+//     }
+// }
 
-let goni = new Mahasiswa('Abdul Goni', 10);
+// let goni = new Mahasiswa('Abdul Goni', 10);
 
 
 
@@ -113,3 +113,23 @@ let goni = new Mahasiswa('Abdul Goni', 10);
 // }
 
 // let goni = new Mahasiswa('Abdul Goni', 20)
+
+
+
+
+
+const box = document.querySelector('.box');
+box.addEventListener('click', function(){
+    let satu = 'size';
+    let dua = 'caption';
+
+    if (this.classList.contains(satu)) {
+        [satu, dua] = [dua, satu];
+    }
+
+
+    this.classList.toggle(satu);
+    setTimeout(() => {
+        this.classList.toggle(dua);
+    }, 600);
+});

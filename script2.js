@@ -98,7 +98,7 @@
 // const nama = (nama, waktu) => {return `Halo, ${nama} selamat ${waktu}`};
 // console.log(nama("Abdul Goni Murod", "Malam"));
 
-let nama = ['Abdul Goni Murod', 'Muhamad Soleh', 'Siti Suhiah']
+// let nama = ['Abdul Goni Murod', 'Muhamad Soleh', 'Siti Suhiah']
 // const jumlahNama = nama.map(function(nama){
 //     return nama.length;
 // });
@@ -108,8 +108,8 @@ let nama = ['Abdul Goni Murod', 'Muhamad Soleh', 'Siti Suhiah']
 // const jumlahNama = nama.map(nama => nama.length);
 // console.log(jumlahNama);
 
-const jumlahHuruf = nama.map(nama => ({ nama, jmlHuruf : nama.length}));
-console.table(jumlahHuruf);
+// const jumlahHuruf = nama.map(nama => ({ nama, jmlHuruf : nama.length}));
+// console.table(jumlahHuruf);
 
 
 // Implisit return
@@ -120,4 +120,44 @@ console.table(jumlahHuruf);
 // console.log(nama());
 
 
+// Konsep this pada Arrow Function
 
+// Constructor Function
+
+// const Mahasiswa = function () {
+//     this.nama = 'Abdul Goni Murod';
+//     this.umur = 21;
+//     this.sayHello = function () {
+//         console.log(`Halo, Nama saya ${this.nama}, saya berumur ${this.umur} tahun`);
+//     }
+// }
+
+// const goni = new Mahasiswa();
+
+
+
+// Arrow Function tidak memiliki konsep this
+
+// const Mahasiswa = function () {
+//     this.nama = 'Abdul Goni Murod';
+//     this.umur = 21;
+//     this.sayHello =  () => {
+//         console.log(`Halo, Nama saya ${this.nama}, saya berumur ${this.umur} tahun`);
+//     }
+// }
+
+// const goni = new Mahasiswa();
+
+// const Mahasiswa = function () {
+//     this.nama = 'Abdul Goni Murod';
+//     this.umur = 21;
+//     this.sayHello =  () => {
+//         console.log(`Halo, Nama saya ${this.nama}, saya berumur ${this.umur} tahun`);
+//     }
+
+//     setInterval(() => {
+//         console.log(this.umur++)
+//     }, 500)
+// }
+
+// const goni = new Mahasiswa();
