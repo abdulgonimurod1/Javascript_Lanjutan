@@ -46,4 +46,4 @@ const hasil = angka.filter(a => a > 4 ) // 8, 9, 10, 7
 .map(a => a * 3) // 24, 27, 30,21
 .reduce((acc, cur) => acc + cur); //102
 
-console.log(hasil)
+console.log(hasil);
