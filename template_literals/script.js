@@ -73,28 +73,60 @@
 // 4. Nested
 // HTML fragments bersarang
 
-const mhs = {
-    nama : 'abdul goni',
-    semester : 1,
-    mataKuliah : [
-        'Pemrograman web',
-        'sistem informasi',
-        'pemrograman sistem interaktif'
-    ]
-};
+// const mhs = {
+//     nama : 'abdul goni',
+//     semester : 1,
+//     mataKuliah : [
+//         'Pemrograman web',
+//         'sistem informasi',
+//         'pemrograman sistem interaktif'
+//     ]
+// };
 
-function cetakMataKuliah(mataKuliah){
-    return `
-    <ol>
-        ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
-    </ol>`
+// function cetakMataKuliah(mataKuliah){
+//     return `
+//     <ol>
+//         ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
+//     </ol>`
+// }
+
+// const el = `<div class="mhs">
+//     <h2>${mhs.nama}</h2>
+//     <span class="semester">Semester : ${mhs.semester}</span>
+//     <h4>Mata Kuliah</h4>
+//     ${cetakMataKuliah(mhs.mataKuliah)}
+// </div>`
+
+// document.body.innerHTML = el;
+
+
+
+// Tagged templates
+// const nama = 'Abdul Goni Murod';
+// const umur = 33;
+
+// function coba (strings, ...values){
+//     // let result = '';
+//     // strings.forEach((str, i) => {
+//     //     result += `${str}${values[i] || ''}`
+//     // });
+//     // return result;
+
+//    return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}`, '');
+// }
+
+// const str = coba`Halo, Nama saya ${nama}, saya berumur ${umur} tahun`
+// console.log(str);
+
+// Highlight
+
+const nama = 'Abdul Goni Murod';
+const umur = 33;
+
+function highlight (strings, ...values){
+   return strings.reduce((result, str, i) => `${result}${str}<span class="hl">${values[i] || ''}</span>`, '');
 }
 
-const el = `<div class="mhs">
-    <h2>${mhs.nama}</h2>
-    <span class="semester">Semester : ${mhs.semester}</span>
-    <h4>Mata Kuliah</h4>
-    ${cetakMataKuliah(mhs.mataKuliah)}
-</div>`
+const str = highlight`Halo, Nama saya ${nama}, saya berumur ${umur} tahun`
 
-document.body.innerHTML = el;
+document.body.innerHTML = str;
